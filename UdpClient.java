@@ -46,3 +46,9 @@ public class Client {
         System.out.println("Enter the path of the file you want to send");
         String path = input.next();
         File initialFile = new File (path);
+            FileInputStream targetStream = new FileInputStream(initialFile);
+        int filesize = targetStream.available();
+        byte[] data = new byte[1024];
+        for(int i = 0; i <1024; i++){
+            data[i]=(byte)targetStream.read();
+        }
