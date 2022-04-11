@@ -13,4 +13,12 @@ public class UdpClient2 {
         // Destimi i IP Serverit
         InetAddress ipAdresa = InetAddress.getByName("localhost");
 
-      
+        // Krijimi i buffered per te derguar te dhena
+        byte [] dergimiDhena = new byte[1024];
+
+        DatagramPacket paketa = new DatagramPacket(dergimiDhena, dergimiDhena.length, ipAdresa, 5001);
+        diagramiSocket.send(paketa);
+        diagramiSocket.close();
+    }
+}
+       
