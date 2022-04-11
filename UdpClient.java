@@ -52,3 +52,12 @@ public class Client {
         for(int i = 0; i <1024; i++){
             data[i]=(byte)targetStream.read();
         }
+                DatagramPacket clpkt = new 
+        DatagramPacket(data,data.length,dest,port);
+        packetcount++;
+        clskt.send(clpkt);
+        if(packetcount > neededpackets)
+        clskt.close();
+    }
+
+}
