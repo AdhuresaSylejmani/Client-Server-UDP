@@ -41,3 +41,8 @@ public class Client {
         int port = input.nextInt();
         System.out.println("Enter Destination Host name");
         String hostname = input.text();
+        dest.getByName(hostname);
+        int packetcount = 0;
+        System.out.println("Enter the path of the file you want to send");
+        String path = input.next();
+        File initialFile = new File (path);
