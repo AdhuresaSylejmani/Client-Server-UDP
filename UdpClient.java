@@ -33,3 +33,11 @@ public class UdpClient {
         diagramiSocket.close();
     }
 }
+public class Client {
+    static InetAdress dest;
+    public static void main (String[] args) throws Exception {
+        DatagramSocket clskt = new DatagramSocket();
+        Scanner input new Scanner (System.in);
+        int port = input.nextInt();
+        System.out.println("Enter Destination Host name");
+        String hostname = input.text();
